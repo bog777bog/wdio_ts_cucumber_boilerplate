@@ -1,0 +1,2 @@
+# wdio_ts_cucumber_boilerplate
+Integration tests
