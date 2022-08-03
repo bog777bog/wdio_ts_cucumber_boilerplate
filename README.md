@@ -1,9 +1,12 @@
 # wdio_ts_cucumber_boilerplate
 Integration tests
 
-# Setting up
-Run 
+# Getting Started
+Install the dependencies:
 `npm install`
+
+Compile TypeScript:
+`npm run build`
 
 # Run Test
 You can start your test suite by using the run command and pointing to the WebdriverIO config that you just created:
