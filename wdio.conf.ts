@@ -39,7 +39,7 @@ export const config: Options.Testrunner = {
     // ==================
     specs: [
         './test/features/**/*.feature'
-        
+
     ],
     // Patterns to exclude.
     exclude: [
@@ -51,12 +51,8 @@ export const config: Options.Testrunner = {
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
-    //
     // ===================
     // Test Configurations
-    // ===================
-    // Define all options that are relevant for the WebdriverIO instance here
-    //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
     bail: 0,
@@ -69,24 +65,14 @@ export const config: Options.Testrunner = {
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
-    //
-    // Default timeout in milliseconds for request
-    // if browser driver or grid doesn't send response
     connectionRetryTimeout: 120000,
-    //
-    // Default request retries count
     connectionRetryCount: 3,
     services: ['chromedriver','geckodriver'],
     framework: 'cucumber',
 
-    //
     // Test reporter for stdout.
-    // The only one supported by default is 'dot'
-    // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
 
-
-    //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
@@ -116,7 +102,6 @@ export const config: Options.Testrunner = {
         ignoreUndefinedDefinitions: false
     },
     
-    //
     // =====
     // Hooks
     // =====
