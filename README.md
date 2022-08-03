@@ -15,3 +15,10 @@ If you like to run specific test files you can add a --spec parameter:
 or define suites in your config file and run just the test files defined by in a suite:
 
 `npx wdio run ./wdio.conf.js --suite exampleSuiteName`
+
+# Cucumber 
+
+To generate steps sceleton
+`npx cucumber-js path_to_feature_file`
+
+After you created steps file you should specify path to it in wdio.conf.ts
