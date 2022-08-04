@@ -28,13 +28,13 @@ When('User fills out {string} in permanent address field', async (permanentAdres
 
 When('User clicks on submit button', async () => {
     await TextoxPage.clickSubmitButton();
-    await browser.pause(3000);
 });
 
-Then((/Text data should be displayed in output area "([^"]*)"$/), async (array) => {
-    const myArray = array.split(",");
-    for (const el of myArray) {
-        expect(TextoxPage.outputArea).toHaveText(el);
+Then('Text data should be displayed in output area {string}', async (array) => {
+    const myArray = await array.split(",");
+    for (let el of myArray) {
+        await console.log(`Hello1 ${el}`);
+        await expect(TextoxPage.outputArea).toHaveTextContaining(el);
     }
 });
 

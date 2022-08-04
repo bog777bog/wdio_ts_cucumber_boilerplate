@@ -49,12 +49,20 @@ export const config: Options.Testrunner = {
     capabilities: [{
         maxInstances: 5,
         browserName: 'chrome',
+        'goog:chromeOptions': { 
+            args: [
+                   //"--headless", 
+                   "user-agent=...",
+                   "--disable-gpu",
+                   "--window-size=1920,1080"
+                  ]
+       },
         acceptInsecureCerts: true
     }],
     // ===================
     // Test Configurations
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     bail: 0,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
