@@ -22,3 +22,12 @@ To generate steps sceleton
 `npx cucumber-js path_to_feature_file`
 
 After you created steps file you should specify path to it in wdio.conf.ts
+
+
+# Features
+- Typescript
+- PageObject
+- Cucumber.js
+- GTS - npx gts fix src\filename
+
+
