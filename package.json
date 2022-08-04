@@ -17,14 +17,12 @@
     "wdio-geckodriver-service": "^3.0.2"
   },
   "scripts": {
+    "test": "wdio ./wdio.conf.ts --cucumberOpts.tagExpression",
     "wdio": "wdio run wdio.conf.ts",
     "cucumber": "cucumber-js",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint"
+    "fix": "gts fix"
   }
 }
