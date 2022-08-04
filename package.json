@@ -18,6 +18,7 @@
   },
   "scripts": {
     "wdio": "wdio run wdio.conf.ts",
+    "cucumber": "cucumber-js",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",

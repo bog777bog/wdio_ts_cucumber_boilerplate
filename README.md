@@ -11,10 +11,15 @@ You can start your test suite by using the run command and pointing to the Webdr
 `npx wdio run ./wdio.conf.js`
 If you like to run specific test files you can add a --spec parameter:
 
-`npx wdio run ./wdio.conf.js --spec example.e2e.js`
+`npx wdio run ./wdio.conf.js --spec textbox.feature`
 or define suites in your config file and run just the test files defined by in a suite:
 
 `npx wdio run ./wdio.conf.js --suite exampleSuiteName`
+
+# WDIO CLI
+If you want to install reporter or other service from WDIO CLI
+    https://webdriver.io/docs/clioptions/ 
+
 
 # Cucumber 
 

@@ -34,7 +34,7 @@ When('User clicks on submit button', async () => {
   await TextoxPage.clickSubmitButton();
 });
 
-Then('Text data should be displayed in output area {string}', async array => {
+Then('Text data should be displayed in output area {string}', async (array) => {
   const myArray = await array.split(',');
   for (const el of myArray) {
     await expect(TextoxPage.outputArea).toHaveTextContaining(el);
