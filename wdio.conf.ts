@@ -1,24 +1,6 @@
 import type {Options} from '@wdio/types';
 
 export const config: Options.Testrunner = {
-  //
-  // ====================
-  // Runner Configuration
-  // ====================
-  //
-  //
-  // =====================
-  // ts-node Configurations
-  // =====================
-  //
-  // You can write tests using TypeScript to get autocompletion and type safety.
-  // You will need typescript and ts-node installed as devDependencies.
-  // WebdriverIO will automatically detect if these dependencies are installed
-  // and will compile your config and tests for you.
-  // If you need to configure how ts-node runs please use the
-  // environment variables for ts-node or use wdio config's autoCompileOpts section.
-  //
-
   autoCompileOpts: {
     autoCompile: true,
     // see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
@@ -33,10 +15,6 @@ export const config: Options.Testrunner = {
     //     baseUrl: './'
     // }
   },
-  //
-  // ==================
-  // Specify Test Files
-  // ==================
   specs: ['./test/features/**/*.feature'],
   // Patterns to exclude.
   exclude: [
@@ -63,14 +41,7 @@ export const config: Options.Testrunner = {
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: 'silent',
   bail: 0,
-  //
-  // Set a base URL in order to shorten url command calls. If your `url` parameter starts
-  // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
-  // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
-  // gets prepended directly.
   baseUrl: 'http://localhost',
-  //
-  // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
@@ -84,8 +55,8 @@ export const config: Options.Testrunner = {
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
     require: [
-      './test/features/steps/login_steps.ts',
-      './test/features/steps/textbox_steps.ts',
+      './test/steps/login_steps.ts',
+      './test/steps/textbox_steps.ts',
     ],
     // <boolean> show full backtrace for errors
     backtrace: false,
@@ -265,6 +236,7 @@ export const config: Options.Testrunner = {
    */
   // onComplete: function(exitCode, config, capabilities, results) {
   // },
+  
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session

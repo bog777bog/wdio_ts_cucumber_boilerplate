@@ -1,6 +1,7 @@
 import {Given, When, Then} from '@wdio/cucumber-framework';
 
-import TextoxPage from '../page/textbox_page';
+import TextoxPage from '../features/page/textbox_page';
+import TestData from '../features/support/test_data';
 
 const pages = {
   textbox: TextoxPage,
@@ -24,8 +25,7 @@ When('User fills out {string} in current address field',
   }
 );
 
-When('User fills out {string} in permanent address field',
-  async (permanentAdress: string) => {
+When('User fills out {string} in permanent address field', async (permanentAdress: string) => {
     await TextoxPage.fillOutPermanentAdress(permanentAdress);
   }
 );
